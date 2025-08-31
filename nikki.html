@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy 3 Months, Nikita 💕</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at top, #ffe6f0, #ffb3c6);
+      overflow: hidden;
+      color: #333;
+      text-align: center;
+      animation: fadeIn 2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-top: 2em;
+      color: #fff;
+      text-shadow: 2px 2px #ff69b4;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff69b4; }
+      to { text-shadow: 0 0 20px #ff1493; }
+    }
+
+    footer {
+      margin-top: 3em;
+      font-size: 0.9em;
+      color: #fff;
+    }
+
+    #love-note {
+      position: fixed;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255, 255, 255, 0.95);
+      padding: 1.2em;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      font-size: 1em;
+      max-width: 90%;
+      width: 400px;
+      z-index: 1000;
+      animation: fadeNote 3s ease-in-out;
+    }
+
+    @keyframes fadeNote {
+      0% { opacity: 0; transform: translateX(-50%) scale(0.9); }
+      50% { opacity: 1; transform: translateX(-50%) scale(1); }
+      100% { opacity: 1; }
+    }
+
+    #close-note {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      background: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    #close-note:hover {
+      background: #ff1493;
+    }
+
+    .sparkle {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background: radial-gradient(circle, #fff, #ff69b4);
+      border-radius: 50%;
+      pointer-events: none;
+      animation: sparkle 0.8s ease-out forwards;
+      z-index: 9999;
+    }
+
+    @keyframes sparkle {
+      0% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(3); opacity: 0; }
+    }
+
+    .heart {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_corazón.svg/1024px-Heart_corazón.svg.png') no-repeat center;
+      background-size: contain;
+      animation: float 6s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+    }
+
+    .heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+    .heart:nth-child(2) { left: 30%; animation-delay: 2s; }
+    .heart:nth-child(3) { left: 50%; animation-delay: 4s; }
+    .heart:nth-child(4) { left: 70%; animation-delay: 1s; }
+    .heart:nth-child(5) { left: 90%; animation-delay: 3s; }
+
+    @media screen and (max-width: 600px) {
+      h1 { font-size: 2em; }
+      #love-note { font-size: 0.95em; padding: 1em; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Happy 3 Months, Nikita 💖</h1>
+
+ 
+
+
+  <div id="love-note">
+    <button id="close-note">×</button>
+    <p>
+      Hey Nikita, before anything else... I just want you to know:  
+      These past three months have been the most beautiful chapter of my life.  
+      Your smile, your kindness, your love—everything about you feels like home.  
+      I’m so lucky to be yours. 💖  
+      —Mukul
+    </p>
+  </div>
+
+ <p>
+    Three months of laughter, love, and unforgettable memories. You make every day brighter, Nikita. I’m so lucky to have you, and I can’t wait to keep building this beautiful journey together. 💫
+  </p>
+
+  <footer>
+    Forever yours,<br />
+    Mukul 💌
+  </footer>
+
+  
+  <div class="heart"></div>
+  <div class="heart"></div>
+  <div class="heart"></div>
+  <div class="heart"></div>
+  <div class="heart"></div>
+
+  
+  <script>
+    document.getElementById("close-note").addEventListener("click", function(e) {
+      const sparkle = document.createElement("div");
+      sparkle.className = "sparkle";
+      sparkle.style.left = e.clientX + "px";
+      sparkle.style.top = e.clientY + "px";
+      document.body.appendChild(sparkle);
+      setTimeout(() => sparkle.remove(), 800);
+      document.getElementById("love-note").style.display = "none";
+    });
+  </script>
+</body>
+</html>
